@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> 
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="licorne2andréa.css">
+    <title>Licorne 2</title>
+</head>
+<body>
+
+    <header class="menu">
+
+        <h1>MyUnicorn</h1>
+        <nav class="main-navbar">
+            <ul>
+                <li onmouseover="sousmenu();" onmouseout="sousmenu2();"><a id="principe">Le principe</a></li>
+
+                <ul onmouseover="sousmenu();" onmouseout="sousmenu2();" id="sous-menu">
+                    <li>La légende</li>
+                    <li>La mythologie</li>
+                </ul>
+
+                <li><a href="#">Nos licornes</a></li>
+                <li><a href="#">Nous trouver</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    
+
+    <main>
+
+        <section class="rainbow">
+            <h2> Un jour, une licorne</h2>
+        </section>
+
+
+
+        <section class="contenu">
+
+            <article class="principe">
+                <h3><i class="far fa-star"></i>Le principe</h3>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium modi nobis explicabo assumenda error debitis vero eum. Reiciendis provident laborum fugiat molestias enim hic sint similique, quod, laudantium, necessitatibus ex?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam exercitationem esse officia laborum, ipsum voluptas harum, voluptatum nam, voluptate fugit repellendus quas placeat reprehenderit unde repudiandae numquam expedita consequatur illum?</p>
+
+                <div class="toggle">
+                    <div class="more">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolor repudiandae facilis nihil magni doloribus ex, ut quasi sunt dolores obcaecati. Neque corporis laboriosam at error ex distinctio, facere ullam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis necessitatibus est earum rerum facere dolorem commodi. Similique accusantium quisquam veniam, magnam, cupiditate, accusamus possimus sed officia incidunt iusto nostrum? Repudiandae.</p>
+                
+                    </div>
+
+                    <div class="less">
+                        <a href="#" class="readmore">Lire plus...</a>
+                    </div>
+                </div>
+        
+        
+            </article>
+        
+        
+        
+
+            <article class="licorne">
+
+                <h3><i class="far fa-star"></i>Nos licornes</h3>
+
+                <div class="image"><figure><img src="photo1.jpg" alt=""><figcaption>Lulu Confetty</figcaption></figure></div><!--
+
+                --><div class="image"><figure><img src="photo2.jpg" alt=""><figcaption>Lapillon Magik</figcaption></figure></div><!--
+
+                --><div class="image"><figure><img src="photo3.jpg" alt=""><figcaption>El NinjaCorn</figcaption></figure></div><!--
+
+                --><div class="image"><figure><img src="photo4.jpg" alt=""><figcaption>Sweety Candy</figcaption></figure></div>
+
+            </article>
+
+            
+            <section class="trouver">
+                <article class="map">
+                    <h3><i class="far fa-star"></i>Nous trouver</h3>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.1872829199388!2d2.3541141158692303!3d48.85463900892462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671fd10fa77a9%3A0xb2bbd365849898f2!2sEcole+Webforce3!5e0!3m2!1sfr!2sfr!4v1538728445957" width="500" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                </article><!--
+
+                --><article class="contact">
+                    <h4>Notre élevage de licorne est situé au :</h4>
+
+                    <p>18 Rue Geoffroy d'Asnier</p>
+                    <p>75004, Paris</p>
+                            
+                    <a href="#"><span>01.23.45.67.89 </span></a>
+
+                    <h4>Newsletter</h4>
+
+                    <p>Abonnez-vous simplement à notre newsletter mensuelle !</p>
+
+                    <form action="newsletter.php" method="GET">
+                        <div>
+                            <input type="email" placeholder="votre@email.fr">
+                        </div>
+        
+                        <div class="valid">
+                            <button type="submit" class="button">Valider</button>
+                        </div>
+        
+                    </form>
+                </article>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>2018 <i class="far fa-copyright"></i> WebForce3</p>
+    </footer>
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+    
+        let mouse = document.getElementById("sous-menu"); // Je déclare une variable mouse qui contient l'ID sous-menu dans le DOM html
+
+    function sousmenu(){        // Je créer une fonction sousmenu qui permet de faire apparaitre mon sous-menu quand j'appelle la fonction en mouseover
+        mouse.style.display = "block";
+    }
+
+    function sousmenu2(){        // Je créer une nouvelle fonction sousmenu qui permet de faire disparaitre le sous-menu quand je ne passe plus la souris dessus avec mouseout
+        mouse.style.display = "none";
+    }
+      
+
+      $(function(){
+
+          $(".readmore").click(function(){
+              $(".more").toggle("slow", function(){
+
+              });
+          });
+      });
+
+    
+    
+    </script>
+    
+</body>
+</html>
